@@ -9,6 +9,19 @@
     const success = true
 
     const num = 0;
+
+    let names = ['Mark','Uwe','Kling']
+    const fullNames = [
+        {name: 'bruce', surname: 'wayn'},
+        {name: 'clark', surname: 'kent'},
+        {name: 'prinzess', surname: 'diana'},
+    ]
+    const shuffleNames = ()=>{
+        names = names
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value)
+    }
 </script>
 
 <main>
@@ -29,6 +42,21 @@
     {:else}
         <h2>The Number is Positv</h2>
     {/if}
+
+    {#each names as item, index(item)}
+         <h2>{item}</h2>
+         <input placeholder="Last Name"/>
+    {/each}
+    {#each names as item}
+        <h2>{item}</h2>
+        <input placeholder="Last Name"/>
+    {/each}
+    {#each fullNames as item}
+        <h2>{item.surname}</h2>
+    {/each}
+    <button on:click={shuffleNames}>Shuffle!</button>
+
+
     
 </main>
 
