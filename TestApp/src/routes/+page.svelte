@@ -1,13 +1,15 @@
 <script>
-	import Modal from './modal.svelte';
+	import NavbarComponent from './Com/navbarComponent.Svelte';
+	import LoginModal from './Modals/loginModal.svelte';
+	import RegistrationModal from './Modals/registrationModal.svelte';
 	const websiteName = 'Plantigo';
+	const logedIn = true;
 </script>
 
 <svelte:head>
 	<style>
 		body {
-			background: ;
-			color: white;
+			background: #eee;
 			font-size: 1.1em;
 			padding: 0 auto;
 			max-width: 600px;
@@ -26,19 +28,18 @@
 			color: grey;
 		}
 		button:focus {
-			background: lightgreen;
+			background: green;
 		}
 		h1 {
 			text-transform: uppercase;
 			text-align: center;
 			font-size: 4em;
 			font-weight: 100;
-			color: lightgreen;
+			color: green;
 		}
 		h2 {
-			text-transform: uppercase;
 			font-weight: 100;
-			color: yellow;
+			color: orangered;
 		}
 		@media (min-width: 640px) {
 			main {
@@ -54,5 +55,10 @@
 </main>
 
 <body>
-	<Modal />
+	<NavbarComponent />
+	{#if logedIn}
+		<RegistrationModal />
+	{:else}
+		<LoginModal />
+	{/if}
 </body>
