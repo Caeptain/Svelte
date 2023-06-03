@@ -15,4 +15,8 @@
 {/if}
 
 <style>
+	.customer {
+		padding-left: 20%;
+		padding-top: 2%;
+	}
 </style>

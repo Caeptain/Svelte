@@ -33,6 +33,10 @@
 </div>
 
 <style>
+	.conditions {
+		padding-left: 20%;
+		padding-top: 2%;
+	}
 	.danger {
 		color: #ff3e00;
 	}
