@@ -1,7 +1,7 @@
 <script>
-	const success = true;
-	const disabled = true;
-	const num = 0;
+	export let success = true;
+	const disabled = false;
+	let num = 0;
 
 	export let names = ['Mark', 'Uwe', 'Kling'];
 	const fullNames = [
@@ -11,6 +11,7 @@
 	];
 
 	const shuffleNames = () => {
+		num++;
 		names = names
 			.map((value) => ({ value, sort: Math.random() }))
 			.sort((a, b) => a.sort - b.sort)
@@ -26,7 +27,7 @@
 		</form>
 	{/each}
 
-	<button {disabled} on:click={shuffleNames}>Shuffle!</button>
+	<button {disabled} on:click={shuffleNames}>Shuffle! Count: {num}</button>
 
 	<h2 class={success ? 'success' : 'danger'}>{success ? 'Win' : 'Warning!'}</h2>
 	{#if success}<h2 class:success>success</h2> {/if}

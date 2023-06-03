@@ -16,6 +16,8 @@
 		showConditions = true;
 		showCustomer = false;
 	};
+
+	var success = false;
 </script>
 
 <div class="navbarContainer">
@@ -54,7 +56,7 @@
 		<Customer />
 	{/if}
 	{#if showConditions}
-		<Exercise1 />
+		<Exercise1 {success} />
 	{/if}
 </div>
 
