@@ -37,20 +37,21 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
-# Ui
+# Ui Bootstrap
 
-## Components
+## Install
+
+https://getbootstrap.com/docs/5.0/getting-started/download/
 
 ```bash
-npm install --save-dev @smui/button
-npm install --save-dev @smui/card
+npm install bootstrap
+npm install rollup-plugin-copy -D
 # etc...
 ```
 
-## Themes
-
-The Default Theme
+Add this to app.html
 
 ```bash
-npm install --save svelte-material-ui
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 ```
